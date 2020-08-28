@@ -1,11 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Geometria</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <a class="navbar-brand" href="index.html">Geometria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/historia.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="html/formulas.html">Formulas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="html/galeria.html" class="nav-link">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a href="html/contactenos.html" class="nav-link">Contactenos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="html/factura.html" class="nav-link">Factura</a>
+                </li>
+                <li class="nav-item" id="nombre">
+                    
+                </li>
+                <li class="nav-item" id="sesion_cerrar">
+                    <button class="nav-link btn btn-sm btn-primary" onclick="cerrarSesion()">Cerrar sesion</button>
+                </li>
+                <li class="nav-item" id="sesion">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        Inicia sesion
+                    </a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="row">
+                                <div class="col-lg-6 d-none d-sm-block">
+                                    <img src="img/geometria_login.jpg" alt="geometria_login" class="img-fluid">
+                                </div>
+                                  <div class="col-lg-6 p-4 text-center">
+                                    <form id="form_login">
+                                        <h2>Inicia sesion</h2>
+                                        <div class="form-group">
+                                          <input type="email" required id="email"class="form-control mb-3" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="password" required id="password" class="form-control" placeholder="password">
+                                        </div>
+                                        <div class="form-group">
+                                          <input type="submit"  class="btn btn-primary" value="Inicia sesion">
+                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        </div>
+                                    </form>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide d-none d-sm-block" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/euclides.jpg" class="d-block w-100" alt="euclides">
+              </div>
+              <div class="carousel-item">
+                <img src="img/slider2.png" class="d-block w-100" alt="slider2">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        <h1 class="text-center my-3">GEOMETRIA</h1>
+        <hr class="border border-dark my-3" />
+        <p class="text-center">
+            Geometría es una parte de las matemáticas mediante la cual se estudian las propiedades
+            y las medidas de las figuras en el plano y en el espacio.
+        </p>
+
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="jumbotron d-none d-sm-block">
+                    <ol>
+                        <li><a href="#introducion">Introduccion</a></li>
+                        <li><a href="#utilidad">Utilidad</a></li>
+                        <li><a href="#avance">El avance de la geometria</a></li>
+                        <ol>
+                            <li><a href="#figuras">Figuras fundamentales</a></li>
+                            <li><a href="#definiciones">Definiciones</a></li>
+                        </ol>
+                        <li><a href="#relaciones">Relaciones y propiedades entre dos rectas</a></li>
+                        <li><a href="#clases">Clases de geometria</a></li>
+                        <ol>
+                            <li><a href="#formas">Formas geometricas</a></li>
+                        </ol>
+                        <li><a href="#curiosidad">Curiosidad</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-10">
+                <div id="introducion">
+                    <h2>Introducción</h2>
+                    <hr class="border border-primary" />
+                    <p>En el siglo III a. n. e., Euclides dio expresión matemática a todas las experiencias del hombre
+                        con la geometría, en su obra “Elementos”, que se mantuvo sin modificaciones hasta más de dos mil
+                        años después.
+
+                        En esta obra se presentó de manera formal el estudio de las propiedades de líneas y planos,
+                        círculos y esferas, triángulos y conos, entre otros. Los teoremas o postulados (axiomas) que nos
+                        presentó Euclides son los que nos enseñan aún en la escuela.
+
+                        Un ejemplo de un postulado sería: “en un triángulo rectángulo el cuadrado de la hipotenusa es
+                        igual a la suma de los cuadrados de los catetos”, que es el famoso teorema de Pitágoras.
+                    </p>
+                </div>
+                <div id="utilidad">
+                    <h2>Utilidad</h2>
+                    <hr class="border border-primary" />
+                    <ul>
+                        <li>Medir areas y volumenes</li>
+                        <li>Prepararar diseños</li>
+                        <li>Fabricar artesanías.</li>
+                        <li>Es la justificación teórica de muchos instrumentos, entre los que se encuentran: :* Compás.
+                        </li>
+                    </ul>
+                </div>
+                <div id="avance">
+                    <h2>El avance de la geometria</h2>
+                    <hr class="border border-primary" />
+                    <p>El avance de la geometría depende del avance en las definiciones; p. ej. las propiedades de los
+                        triángulos serían posibles de enunciar sin hacer referencia a estos pero sería un proceso largo
+                        tedioso e inútil.
+                    </p>
+                    <h3 id="figuras">Figuras fundamentales</h3>
+                    <ul>
+                        <li>Punto</li>
+                        <li>Recta</li>
+                        <li>Plano</li>
+                    </ul>
+                    <h3 id="definiciones">Definiciones</h3>
+                    <ul>
+                        <li>En la recta se pueden ver: Segmentos, semirectas y vectores</li>
+                        <li>En el plano, una recta determina dos semiplanos, su intersección determina las figuras
+                            convexas: faja, Ángulo, Triángulo, cuadrángulo y Polígono.</li>
+                        <li>Utilizando el concepto de distancia: se definen: el círculo y la esfera.</li>
+                        <li>Utilizando el concepto de semiespacio se definen: el diedro, el espacio prismático, el
+                            triedro, el ángulo poliedro, y los poliedros. Entre los últimos encontramos como casos
+                            particulares: el tetraedro, el prisma, la pirámide y el paralelopípedo.</li>
+                        <li>El concepto de círculo en el espacio da origen a: el cono y el cilindro</li>
+                    </ul>
+                </div>
+                <div id="relaciones">
+                    <h2>Relaciones y propiedades entre dos rectas</h2>
+                    <hr class="border border-primary" />
+                    <p>Entre dos o más figuras puede haber relaciones diferentes:</p>
+                    <ul>
+                        <li>Dos rectas pueden ser:</li>
+                        <ul>
+                            <li>Paralelas</li>
+                            <li>Perpendiculares</li>
+                            <li>Oblicuas (se cortan en un punto formando ángulos no rectos).</li>
+                            <ul>
+                                <li>En el espacio, también pueden ser alabeadas (o cruzadas). * Un concepto muy
+                                    importantes dentro de la geometría es el de congruencia o igualdad.</li>
+                            </ul>
+                        </ul>
+                    </ul>
+                </div>
+                <div id="clases">
+                    <h2>Clases de Geometría</h2>
+                    <hr class="border border-primary" />
+                    <ul>
+                        <li>Geometría plana. En ella se da por cierto el axioma del paralelismo de Euclides. Se
+                            consideran las figuras cuyos puntos están todos en un plano.</li>
+                        <li>Geometría espacial (también llamada Geometría del espacio): extensiones de los axiomas
+                            relativos al plano. Se estudian las figuras cuyos puntos no están todos en un mismo plano.
+                        </li>
+                        <li>Geometría analítica: Estudio de figuras mediante un sistema de coordenadas y métodos de
+                            análisis matemático.</li>
+                        <li>Geometría algebraica. Aplicación del álgebra a la geometría para, por medio del cálculo,
+                            resolver ciertos problemas.</li>
+                        <li>Geometrías no euclídeas: Estudio de otros axiomas como diferentes postulados de paralelismo
+                            o de existencia de conjuntos de puntos mayores que el plano (y menores que el espacio)</li>
+                        <li>Geometría proyectiva. Se tratan las proyecciones de las figuras sobre un plano.</li>
+                        <li>Geometría descriptiva. Se encarga de la resolución de los problemas de la geometría del
+                            espacio por medio de operaciones efectuadas en un plano.</li>
+                    </ul>
+                    <h3 id="formas">Formas geometricas</h3>
+                    <p>Clasificación de las formas geométricas elementales.</p>
+                    <ul>
+                        <li>Formas geométricas planas</li>
+                        <ul>
+                            <li>Recta</li>
+                            <li>Poligonos</li>
+                            <li>Secciones conicas</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <li>Formas geométricas espaciales:</li>
+                        <ul>
+                            <li>Superficies regladas.</li>
+                            <li>Poliedros regulares.</li>
+                            <li>Pirámide.</li>
+                            <li>Prisma</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div id="curiosidad">
+                    <h2>Curiosidad</h2>
+                    <hr class="border border-primary" />
+                    <h3>Geometría sin lenguaje escrito ni sistema numérico</h3>
+                    <div class="jumbotron">
+                        Los indios Pueblo, que habitaron lo que es el suroeste estadounidense, utilizaron complejas
+                        formas geométricas para levantar sofisticados complejos arquitectónicos, pese a no tener
+                        lenguaje escrito ni sistema numérico.
+                    </div>
+                </div>
+                <h2>Encuesta</h2>
+                <hr class="border border-primary"/>
+                <div class="jumbotron" >Si usted realiza esta encuesta nos ayudará a obtener informacion acerca de que area 
+                    de aplicacion es la mas popular actualmente, ademas recibirá informacion actualizada sobre esa area en su correo
+                </div>
+                <div class="container text-center py-5">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-6">
+                            <form id="form_encuesta">
+                                <h2>Datos</h2>
+                                <div class="form-group">
+                                    <input type="text" id="encuesta_nombre" class="form-control border border-primary" placeholder="Nombre:">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="encuesta_correo" class="form-control border border-primary" placeholder="Correo:">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control border border-primary" id="select_area">
+                                        <option>Selecciona un area</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary" value="Enviar" style="width: 150px; height: 50px;">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table" id="tabla_encuesta">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Correo</th>
+                                            <th>Area</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEdit">
+                        <h2>Datos</h2>
+                        <div class="form-group">
+                            <input type="text" id="nombreENC" class="form-control border border-primary" placeholder="Nombre:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="correeoENC" class="form-control border border-primary" placeholder="Correo:">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control border border-primary" id="selectEditENC">
+                                <option>Selecciona un area</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Enviar" style="width: 150px; height: 50px;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light">
+        <div class="container-fluid p-4 text-center">
+            <p>Copyright 2020 - Geometria Kevin Diaz / Jhonatan atuesta</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/encuesta.js"></script>
 </body>
+
 </html>

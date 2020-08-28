@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <a class="navbar-brand" href="index.html">Geometria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="historia.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulas.html">Formulas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="galeria.html" class="nav-link">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactenos.html" class="nav-link">Contactenos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="factura.html" class="nav-link">Factura</a>
+                </li>
+                <li class="nav-item" id="nombre">
+
+                </li>
+                <li class="nav-item" id="sesion_cerrar">
+                    <button class="nav-link btn btn-sm btn-primary" onclick="cerrarSesion()">Cerrar sesion</button>
+                </li>
+                <li class="nav-item" id="sesion">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        Inicia sesion
+                    </a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 d-none d-sm-block">
+                                            <img src="../img/geometria_login.jpg" alt="geometria_login" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-6 p-4 text-center">
+                                            <form id="form_login">
+                                                <h2>Inicia sesion</h2>
+                                                <div class="form-group">
+                                                    <input type="email" required id="email" class="form-control mb-3"
+                                                        placeholder="Email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" required id="password" class="form-control"
+                                                        placeholder="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-primary" value="Inicia sesion">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cerrar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-dark p-5">
+        <h2 class="text-center" style="color: white;">Tenemos productos para ti</h2>
+        <hr class="border border-dark"/>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card my-4 text-center">
+                    <div class="card-body">
+                      <img src="../img/regla.jpg" class="img-fluid p-2" alt="" style="height: 200px;">
+                      <h2 class="card-title">Regla</h2>
+                      <p class="card-text">$8.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card my-4 text-center">
+                    <div class="card-body">
+                      <img src="../img/transportador.jpg" class="img-fluid p-4" alt="" style="height: 200px;">
+                      <h2 class="card-title">Transportador</h2>
+                      <p class="card-text">$2.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card my-4 text-center">
+                    <div class="card-body">
+                      <img src="../img/borrador.jpg" class="img-fluid" alt="" style="height: 200px;">
+                      <h2 class="card-title">Borrador</h2>
+                      <p class="card-text">$4.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card my-4 text-center">
+                    <div class="card-body">
+                      <img src="../img/lapiz.jpg" class="img-fluid p-2" alt="" style="height: 200px;">
+                      <h2 class="card-title">Lapiz</h2>
+                      <p class="card-text">$1.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card my-4 text-center">
+                    <div class="card-body">
+                      <img src="../img/compas.jpg" class="img-fluid p-2" alt="" style="height: 200px;">
+                      <h2 class="card-title">Compas</h2>
+                      <p class="card-text">$3.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card my-4 text-center">
+                    <div class="card-body">
+                      <img src="../img/colores.png" class="img-fluid p-2" alt="" style="height: 200px;">
+                      <h2 class="card-title">Colores</h2>
+                      <p class="card-text">$5.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+                <form id="form_factura">
+                    <h2 class="mb-5">¿Que vas a comprar?</h2>
+                    <div class="form-group">
+                        <select class="form-control border border-success" id="select_productos">
+                            <option>Selecciona un producto</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border border-success" id="cantidad" placeholder="Cantidad:">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border border-success" id="nombre_c" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <img src="../img/tarjetas.png" alt="tarjetas" class="img-fluid">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control border border-success" id="tarjeta" placeholder="Tarjeta:">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-outline-success border-success" value="Pagar" style="width: 150px; height: 50px;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table" id="tabla_factura">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Nombre</th>
+                                <th>Tarjeta</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEdit">
+                        <h2 class="mb-5">Actualiza tus datos</h2>
+                        <div class="form-group">
+                            <select class="form-control border border-success" id="selectEdit">
+                                <option>Selecciona un producto</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control border border-success" id="cantidadE" placeholder="Cantidad:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control border border-success" id="nombreE" placeholder="Nombre">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control border border-success" id="tarjetaE" placeholder="Tarjeta:">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-outline-success border-success" value="Pagar" style="width: 150px; height: 50px;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light">
+        <div class="container-fluid p-4 text-center">
+            <p>Copyright 2020 - Geometria Kevin Diaz / Jhonatan atuesta</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/facturas.js"></script>
+</body>
+
+</html>

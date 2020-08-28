@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <a class="navbar-brand" href="index.html">Geometria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="historia.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulas.html">Formulas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="galeria.html" class="nav-link">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactenos.html" class="nav-link">Contactenos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="factura.html" class="nav-link">Factura</a>
+                </li>
+                <li class="nav-item" id="nombre">
+
+                </li>
+                <li class="nav-item" id="sesion_cerrar">
+                    <button class="nav-link btn btn-sm btn-primary" onclick="cerrarSesion()">Cerrar sesion</button>
+                </li>
+                <li class="nav-item" id="sesion">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        Inicia sesion
+                    </a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 d-none d-sm-block">
+                                            <img src="../img/geometria_login.jpg" alt="geometria_login" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-6 p-4 text-center">
+                                            <form id="form_login">
+                                                <h2>Inicia sesion</h2>
+                                                <div class="form-group">
+                                                    <input type="email" required id="email" class="form-control mb-3"
+                                                        placeholder="Email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" required id="password" class="form-control"
+                                                        placeholder="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-primary" value="Inicia sesion">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cerrar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <h1>GALERIA</h1>
+                <hr class="border border-dark"/>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <img src="../img/libro_euclide.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../img/libro_euclides2.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../img/libro_euclides3.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../img/libro4.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../img/libro5.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../img/libro6.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../img/libro7.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                    <div class="col-lg-3">
+                        <img src="../img/libro8.jpg" alt="historia" class="img-fluid p-3">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+            <div class="col-lg-3 col-sm-12">
+                <h2>Libros de interes</h2>
+                <hr class="border border-dark"/>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="#" class="text-monospace text-muted text-decoration-none">Libros sobre euclides</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-monospace text-muted text-decoration-none">Libros sobre geometria</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-monospace text-muted text-decoration-none">Libros sobre logica</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light">
+        <div class="container-fluid p-4 text-center">
+            <p>Copyright 2020 - Geometria Kevin Diaz / Jhonatan atuesta</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

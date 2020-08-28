@@ -1,0 +1,45 @@
+{
+    "usuarios": [
+        {
+            "email": "invitado@gmail.com",
+            "password": "invitado"
+        },
+        {
+            "email": "admin@gmail.com",
+            "password": "admin"
+        },
+        {
+            "email": "bryan@gmail.com",
+            "password": "bryan"
+        }
+    ],
+    "figuras": ["cuadrado", "triangulo", "rombo"],
+    "areas": ["Geometría algebraica","Geometría analítica","Geometría descriptiva","Geometría diferencial","Geometría fractal","Geometría sintética"],
+    "ciudades": ["barranquilla", "bogota", "medellin"],
+    "productos": [
+        {
+            "producto": "lapiz",
+            "precio": 1000
+        },
+        {
+            "producto": "regla",
+            "precio": 8000
+        },
+        {
+            "producto": "transportador",
+            "precio": 2000
+        },
+        {
+            "producto": "borrador",
+            "precio": 4000
+        },
+        {
+            "producto": "compas",
+            "precio": 3000
+        },
+        {
+            "producto": "colores",
+            "precio": 5000
+        }
+    ]
+}
