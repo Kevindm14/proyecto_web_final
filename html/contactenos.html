@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactenos</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <a class="navbar-brand" href="index.html">Geometria</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="historia.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulas.html">Formulas</a>
+                </li>
+                <li class="nav-item">
+                    <a href="galeria.html" class="nav-link">Galeria</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contactenos.html" class="nav-link">Contactenos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="factura.html" class="nav-link">Factura</a>
+                </li>
+                <li class="nav-item" id="nombre">
+
+                </li>
+                <li class="nav-item" id="sesion_cerrar">
+                    <button class="nav-link btn btn-sm btn-primary" onclick="cerrarSesion()">Cerrar sesion</button>
+                </li>
+                <li class="nav-item" id="sesion">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                        Inicia sesion
+                    </a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-6 d-none d-sm-block">
+                                            <img src="../img/geometria_login.jpg" alt="geometria_login" class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-6 p-4 text-center">
+                                            <form id="form_login">
+                                                <h2>Inicia sesion</h2>
+                                                <div class="form-group">
+                                                    <input type="email" required id="email" class="form-control mb-3"
+                                                        placeholder="Email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" required id="password" class="form-control"
+                                                        placeholder="password">
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-primary" value="Inicia sesion">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Cerrar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="background-color: #03A9F4;">
+        <div class="row p-5">
+            <div class="col-lg-6 text-center d-inline-flex align-items-center justify-content-center"  style="color: white;">
+                <h1>CONTACTENOS</h1>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="../img/Contact_banner.original.png" class="img-fluid" alt="contactenos">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center py-5 text-muted bg-light">
+        <h2>Razones para contactarnos</h2>
+        <div class="row py-4">
+            <div class="col-lg-6">
+                <img src="../img/contact1.png" alt="contact1" class="img-fluid">
+                <h3>Solicita demos</h3>
+            </div>
+            <div class="col-lg-6">
+                <img src="../img/contact3.png" alt="contact1" class="img-fluid">
+                <h3>Contacto de soporte</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-6">
+                <form id="form_contactenos">
+                    <h2>Contacto</h2>
+                    <div class="form-group">
+                        <input type="text" id="contacto_nombre" class="form-control border border-primary" placeholder="Nombre:">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="correo" class="form-control border border-primary" placeholder="Correo:">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="telefono" class="form-control border border-primary" placeholder="Telefono:">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control border border-primary" id="select_ciudad">
+                            <option>Selecciona una ciudad</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" class="form-control border border-primary" placeholder="Mensaje:" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" value="Enviar" style="width: 150px; height: 50px;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="table-responsive">
+                    <table class="table" id="tabla_contacto">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Telefono</th>
+                                <th>Ciudad</th>
+                                <th>Mensaje</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar datos</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEdit">
+                        <h2>Contacto</h2>
+                        <div class="form-group">
+                            <input type="text" id="nombreE" class="form-control border border-primary" placeholder="Nombre:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="correoE" class="form-control border border-primary" placeholder="Correo:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="telefonoE" class="form-control border border-primary" placeholder="Telefono:">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control border border-primary" id="selectEdit">
+                                <option>Selecciona una ciudad</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensajeE" class="form-control border border-primary" placeholder="Mensaje:" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Enviar" style="width: 150px; height: 50px;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.431973504474!2d-74.8074881003367!3d11.006180742127409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42da115011e37%3A0xa1e8e21ef0238139!2sVilla%20Country%2C%20Barranquilla%2C%20Atl%C3%A1ntico!5e0!3m2!1ses-419!2sco!4v1598141865481!5m2!1ses-419!2sco"
+            class="w-100"
+            height="400px"
+            frameborder="0" 
+            style="border:0;" 
+            allowfullscreen="" 
+            aria-hidden="false" 
+            tabindex="0"></iframe>
+    </div>
+
+    <footer class="bg-light">
+        <div class="container-fluid p-4 text-center">
+            <p>Copyright 2020 - Geometria Kevin Diaz / Jhonatan atuesta</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/contactenos.js"></script>
+</body>
+
+</html>
